@@ -1,14 +1,79 @@
 \documentclass[12pt]{article}
 
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[paperwidth=210mm,left=20mm,right=20mm,top=20mm,bottom=20mm, paperheight=297mm, includefoot, heightrounded]{geometry}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage[acronym]{glossaries}
+
+\usepackage{amssymb} %for fancy L
+\usepackage{calrsfs} %for fancy L
+\usepackage{cancel}
+\usepackage{tabularx}
+\usepackage[hyphens]{url}
+\usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage{geometry}
+\usepackage[titletoc,title]{appendix}
+\usepackage{subfig}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n} %for fancy L
+\usepackage{epsfig, float,array,tabu,longtable,}
+\usepackage{hyperref,wrapfig}
+\usepackage{enumerate}
+\usepackage{graphicx,psfrag}
+\usepackage{cite}
+\usepackage{sectsty}
+\usepackage{epstopdf}
+\usepackage{amsmath,esint, setspace, fancyhdr, amsfonts, bookmark, blindtext}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usepackage{rotating}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{stackengine}
+\usetikzlibrary{matrix}
+\usepackage{multirow}
+\usepackage{multicol}
+\usetikzlibrary{shapes,backgrounds,patterns}
+\usetikzlibrary{mindmap,trees,decorations.markings}
+\usetikzlibrary{quotes,angles}
+\usepackage{lipsum}
+\usepackage{verbatim}
+\renewcommand{\baselinestretch}{1}
+\setlength{\textheight}{8.7in}
+\setlength{\textwidth}{6.5in}
+
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0.25in}
+\usepackage{graphicx}
+\setlength{\topmargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\parindent}{.3in}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\doublespacing
+
+\include{acronyms_definitions} 
+\makeglossaries
+
+
 \begin{document}
 	
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}};
+    }] {};}
+    
 \title{%
-	\vspace{-3cm}
+	\vspace{-2cm}
 	\Large
 	\textbf{GSA: Farming by Satellite 2020}\\
-		\vspace{1cm}
+		\vspace{1.5cm}
 		\includegraphics[width=0.7\textwidth]{images/logo.png}\\
 	\vspace{3cm}
 	\huge
@@ -20,7 +85,7 @@
 }
 
 \date{%
-	\vspace{7cm}
+	\vspace{5cm}
 	Sonia Framis, Laura ??, Freddy Pinto, Joan Bernabeu\\
 	\vspace{0.5cm}
 	\today}
