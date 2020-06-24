@@ -1,6 +1,60 @@
 \section{ARIFI's project description}
 \subsection{Main idea}
+
+To address the proposed idea and achieve our goal, we will focus on how to relate machine learning techniques, field of Artificial Intelligence (AI), with the study of the atmosphere. Thanks to the Copernicus Atmosphere Monitoring Service, we will be able to access to data that will allow us to predict the main atmospheric phenomenons which affects the production of the majority farmers.
+
+In particular, we are talking about reanalysis variables. This kind of data is obtained by some weather forecasting centres, which combine past observations with a modern meteorological forecast model, in order to produce regular gridded datasets of many atmospheric and oceanic variables, with a temporal resolution of a few hours. This datasets usually extend over several decades and cover the entire planet, being a very useful tool for meteorological and climatological studies. 
+
+One of the most important reanalysis projects is the {\em ERA-Interim reanalysis project}, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF) \cite{ERA_Interim}, which belongs to the Copernicus Programme. ERA-Interim is a global atmospheric reanalysis from 1979, continuously updated in real time. 
+
+Table \ref{Variables_ERA} is just an example of variables that can be obtained from this platform, which could be used as predictors in machine learning models.
+
+\vspace{12pt}
+\begin{table}[H]
+\begin{center}
+\caption{\label{Variables_ERA} Possible predictive variables in a prediction problem.}
+\begin{tabular}{cccc}
+\hline
+variable name & ERA-Interim variable\\
+\hline
+\hline
+skt & surface temperature\\
+sp & surface pression\\
+$u_{10}$& zonal wind component ($u$) at 10m\\
+$v_{10}$& meridional wind component ($v$) at 10m\\
+temp1& Temperature at 500hPa\\
+up1& zonal wind component ($u$) at 500hPa\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\vspace{12pt}
+
+Due to the chaotic nature of atmospheric phenomenons it is so difficult predict with accuracy its future state. Modeling it without any un- certainty is not possible as there is a strong sensitivity to small perturbations in the initial conditions. But there is a way to overcome this issue by the use of probabilistic weather forecasts \cite{martinez2015forecasting}. In this regard, we propose computational methods belonging to machine learning techniques, a branch of AI, to get predictions or classifications over the main atmospheric factors with high accuracy. We could predict solar radiation, wind velocity, or whatever meteorological process that injures in the farmers' environment.
+
+
+
 \subsection{Supplementary ideas}
 \subsection{Added value}
 \subsubsection{Comparisons}	
 \subsection{Discussion of critical areas}
+
+
+
+\begin{thebibliography}{100}
+
+\bibitem{ERA_Interim}
+Dick~P Dee, SM~Uppala, AJ~Simmons, Paul Berrisford, P~Poli, S~Kobayashi,
+  U~Andrae, MA~Balmaseda, G~Balsamo, P~Bauer, et~al.
+\newblock {The ERA-Interim reanalysis: Configuration and performance of the
+  data assimilation system}.
+\newblock {\em Quarterly Journal of the royal meteorological society},
+  137(656):553--597, 2011. 
+
+\bibitem{martinez2015forecasting}
+G~Mart{\'\i}nez-Arellano.
+\newblock {\em Forecasting wind power for the day-ahead market using numerical
+  weather prediction models and computational intelligence techniques}.
+\newblock PhD thesis, Nottingham Trent University, 2015.
+
+\end{thebibliography} 
