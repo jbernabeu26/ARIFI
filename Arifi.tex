@@ -22,12 +22,43 @@ As mentioned earlier, ARIFI is an ongoing project under development. Even though
 \input{overview}
 \newpage
 \subsection{Technical aspect}
+
+\color{blue} As has been mentioned above, ARIFI's AI module will employ different kind of information (such as position, ground level, meteorological variables, among others) provided mainly by GALILEO, EGNOS and COPERNICUS services. This section aims to provide a brief but concise description about them. 
+\color{black} 
+
 \subsubsection{Satellite services}
 \begin{itemize}
-    \item \textbf{GALILEO}
+    \item \textbf{GALILEO} \color{blue} is a global satellite navigation system funded, developed and maintained by Europe which provides to European citizens independence and sovereignty, minimizing the disconnection and/or interruption of other GNSS systems (such as GPS or GLONASS). Furthermore, Galileo offers new services: search and rescue (SAR), Galileo Publich Regulated Serive (PRS) for governmental authorised users and sensitive applications and more precise position for commercial purposes.   
+    
+    Once Galileo is fully operational it will consists of 24 active and 6 reserve satellites. Besides, different frequency bands (see figure \ref{fig:frequency_plan} \footnote{Figure obtained from \url{https://gssc.esa.int/navipedia/index.php/Galileo_Signal_Plan}}) will be used to increase and improve the precision level, availability and timing under the most hostile condition. 
+    
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=0.8\textwidth]{images/Galileo_Frequency_Plan.png}
+    	\caption{Galileo frequency distribution}
+    	\label{fig:frequency_plan}
+    \end{figure} 
+    
+    Galileo system is able to provide a position with a root-mean-square (RMS) error equals to 0.43–1.20 m, 0.52–1.29 m, and 1.34–3.25 m in the east component, north component, and up component, respectively. These errors are comparable to those obtained with GPS system despite the smaller number of satellites and larger PDOPs \cite{Gal_pos}. Obviously, these results can be improved if a precise point positioning (PPP) is used instead of the conventional standard point positioning (SPP). 
+
+	Galileo, in combination with EGNOS (when this service is available), will be used by ARIFI in order to determinate the farmer's position within his farm and thus provide him with information on irregularities in the field. Therefore, a GNSS receiver which determinates the farmer's position is needed. Nonetheless, since ARIFI will has a wide world impact this receiver must be user-friendly and thinking in developing and least developed countries it should be cheap too. In this sense, in ARIFI project two alternatives are being evaluated
+	\begin{itemize}
+		\item A single chip GNSS mass market receiver as the developed under HIMALAYA project \cite{Himalaya}. However, a commercial solution could be too much expensive for the average farmer. 
+		
+		\item A software receiver developed and provided by the ARIFI team. So, the farmer would simply have to have a GNSS antenna and a platform to run the receiver. This option can be supplied at a cheaper price or even for free depending on the farmer's economical condition. 
+	\end{itemize}
+	  
+	Regardless of the option chosen, the receiver will work under open sky conditions so it does not need to be a very sophisticated receiver since the only sources of error will be those given by the ionosphere and the troposphere (multipath can be considered negligible), and both effects can be easily corrected or at least mitigated. In the same way, given the open-sky condition more than 4 satellite can be easily acquired and tracked increasing the accuracy of the position. 
+    
+    
+    \color{black} 
+    
+    
+     
     \item \textbf{EGNOS}
     \item \textbf{Copernicus}
-    
+   
+
 \end{itemize}
 \subsubsection{Artificial intelligence}
 To address the proposed idea and achieve our goal, we will focus on how to relate machine learning techniques, field of Artificial Intelligence (AI), with the study of the atmosphere provided by satellite data. Thanks to the Copernicus Atmosphere Monitoring Service, we will be able to access to data that will allow us to predict the main atmospheric phenomenons which affects the production of the majority farmers.\\\\
