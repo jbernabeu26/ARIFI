@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-\documentclass[a4paper]{article}
+%\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 %\usepackage[paperwidth=210mm,left=20mm,right=20mm,top=20mm,bottom=20mm, paperheight=297mm, includefoot, heightrounded]{geometry}
 \usepackage{pdfpages}
@@ -39,6 +39,7 @@
 \usetikzlibrary{quotes,angles}
 \usepackage{lipsum}
 \usepackage{verbatim}
+\usepackage{geometry}
 \renewcommand{\baselinestretch}{1}
 \setlength{\textheight}{8.7in}
 \setlength{\textwidth}{6.5in}
@@ -56,19 +57,19 @@
 \definecolor{mylilas}{RGB}{170,55,241}
 \doublespacing
 
-\include{acronyms_definitions} 
+\include{acronyms_definitions}
 \makeglossaries
 
 
 \begin{document}
-	
+\newcommand{\link}[1]{{\color{blue}\href{#1}{#1}}}
 \newcommand{\roundpic}[4][]{
   \tikz\node [circle, minimum width = #2,
     path picture = {
       \node [#1] at (path picture bounding box.center) {
         \includegraphics[width=#3]{#4}};
     }] {};}
-    
+
 \title{%
 	\vspace{-2cm}
 	\Large
@@ -85,8 +86,8 @@
 }
 
 \date{%
-	\vspace{5cm}
-	Sonia Framis, Laura ??, Freddy Pinto, Joan Bernabeu\\
+	\vfill
+	Sonia Framis, Laura Cornejo, Freddy Pinto, Joan Bernabeu\\
 	\vspace{0.5cm}
 	\today}
 \maketitle
@@ -98,7 +99,7 @@
 \include{Arifi}
 % TODOS
 \include{team}
-
+\include{bib}
 
 
 
