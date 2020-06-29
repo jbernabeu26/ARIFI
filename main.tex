@@ -63,7 +63,7 @@
 \definecolor{mylilas}{RGB}{170,55,241}
 \doublespacing
 
-\include{acronyms_definitions}
+\include{acronyms}
 \makeglossaries
 
 
@@ -103,8 +103,19 @@
 [anchor=north west] %
 {\includegraphics[width=0.23\textwidth]{images/prize.JPG}};
 
-\newgeometry{top=3cm,bottom=3cm,right= 0.2\linewidth,left=0.23\linewidth}
+% TABLE OF CONTENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\tableofcontents
+\newpage
+% ACRONYMS LIST %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printglossaries
+\newpage
 
+\newgeometry{top=3cm,bottom=3cm,right= 0.2\linewidth,left=0.23\linewidth}
+% pijotada
+\include{pijotada}
+\thispagestyle{empty}
+\cleardoublepage
 % JOAN
 \include{introduction}
 % LAURA & TODOS
