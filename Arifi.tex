@@ -45,8 +45,51 @@ In conclusion, we obtained valuable feedback from farmers that helped the team t
     
     
     \color{black} 
-    \item \textbf{EGNOS}
-    \item \textbf{Copernicus}
+
+    \item \textbf{EGNOS} is satellite-based augmentation system (SBAS) of Europe and is designed to improve the performance offered by GNSS. Using three geostationary satellites, corrections and integrity information are provided to the GPS signals. The coverage that EGNOS has is practically the whole of Europe and is used for different applications and users that require this service.
+    
+    EGNOS provides three different services:
+    
+    \begin{itemize}
+    
+        \item Open Service (OS): the main objective is to improve the precision of the GPS signal (in the future also the GALILEO signal) through corrections related to satellite clocks, satellite position and ionospheric effects.
+        
+        \item Safety of Life (SoL): this service is used in critical applications such as civil aviation operations. The signal performance level in space is the most rigorous.
+        
+        \item EGNOS Data Acces Service (EDAS): is an access point through Internet to EGNOS data in real time and also a data history.
+        
+    \end{itemize}
+
+    In this project, some of the services provided by EGNOS will be used, mainly to monitor crop and soil performance. With the EGNOS data, the spatial variability of the soil can be measured and from these data different maps of the cultivated land can be obtained. These maps will contain the necessary information to be able to accurately apply pesticides, fertilizers and water, thus obtaining a more sustainable agriculture. Another advantage that this entails is the gain of time when carrying out these tasks, achieving a more efficient agriculture.
+
+    An example of an information map that can be offered (with the additional help of geospatial sensors on the ground) would be similar to Figure \ref{fig:egnos} where the efficiency of the terrain is represented:
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/egnos.jpg}
+        \caption{Terrain efficiency map}
+        \label{fig:egnos}
+    \end{figure} 
+    
+    It has been studied that the use of these services in agriculture have a series of advantages and that is why it has been considered to use EGNOS for this project. One of the things that makes this service attractive is that it is completely free and does not require additional hardware installation on farms or agricultural work fields. It is also very interesting since the information received is information in real time thanks to the three geostationary satellites. Finally, EGNOS is widely available, allowing the farmer to be able to use the service at all times.
+    
+    \item \textbf{Copernicus} is a space program promoted by ESA and its main objective is to provide land surface data to improve environmental management and mitigate the effects of climate change, among other applications.
+    
+    Copernicus is composed of a network of sensors positioned around the Earth and 6 different groups of satellites (the Sentiel) that provide terrestrial observations and measurements, such as images of weather conditions, high-resolution multispectral optical images, atmospheric composition, air quality, etc.
+    
+    It has been considered to make use of the data provided by Copernicus, specifically from the second group of satellites (Sentinel 2) which provide multispectral optical images, very useful in the field of agriculture. These satellites pass every 5 days, therefore the farmer will be able to have information about his crop every this period of time with a resolution of 10x10m. An example of the images that these satellites provide can be seen in Figure \ref{fig:copernicus}.
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/copernicus.jpeg}
+        \caption{Image provided by Copernicus}
+        \label{fig:copernicus}
+    \end{figure} 
+    
+    A variable that will be extracted from this service is the Normalized Difference Vegetation Index (NDVI) that is used to estimate the quantity, quality and development of vegetation based on the measurement of radiation intensity of certain bands of the electromagnetic spectrum. that the vegetation emits or reflects. With this parameter the area can be mapped highlighting the parts of the land that need to be fertilized, areas affected by diseases or pests and areas with water deficits.
+    
+    Therefore, the use of the service provided by this program will serve to optimize resources, predict crop performance and save time when inspecting the crop and acting on problems on soil problems.
+    
 \end{itemize}
 \subsubsection{AI side}
 To address the proposed idea and achieve our goal, we will focus on how to relate machine learning techniques, field of Artificial Intelligence (AI), with the study of the atmosphere provided by satellite data. Thanks to the Copernicus Atmosphere Monitoring Service, we will be able to access to data that will allow us to predict the main atmospheric phenomenons which affects the production of the majority farmers.\\\\
