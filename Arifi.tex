@@ -49,9 +49,74 @@ ARIFI aims to provide support to farmers in this issue by making thanks to its a
 \subsection{Technical aspect}
 \subsubsection{Satellite services}
 \begin{itemize}
-    \item \textbf{GALILEO}
-    \item \textbf{EGNOS}
-    \item \textbf{Copernicus}
+    \item \textbf{GALILEO} \color{blue} is a global satellite navigation system funded, developed and maintained by Europe which provides to European citizens independence and sovereignty, minimizing the disconnection and/or interruption of other GNSS systems (such as GPS or GLONASS). Furthermore, Galileo offers new services: search and rescue (SAR), Galileo Publich Regulated Serive (PRS) for governmental authorised users and sensitive applications and more precise position for commercial purposes.   
+    
+    Once Galileo is fully operational it will consists of 24 active and 6 reserve satellites. Besides, different frequency bands (see figure \ref{fig:frequency_plan} \footnote{Figure obtained from \url{https://gssc.esa.int/navipedia/index.php/Galileo_Signal_Plan}}) will be used to increase and improve the precision level, availability and timing under the most hostile condition. 
+    
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=0.8\textwidth]{images/Galileo_Frequency_Plan.png}
+    	\caption{Galileo frequency distribution}
+    	\label{fig:frequency_plan}
+    \end{figure} 
+    
+    Galileo system is able to provide a position with a root-mean-square (RMS) error equals to 0.43–1.20 m, 0.52–1.29 m, and 1.34–3.25 m in the east component, north component, and up component, respectively. These errors are comparable to those obtained with GPS system despite the smaller number of satellites and larger PDOPs \cite{Gal_pos}. Obviously, these results can be improved if a precise point positioning (PPP) is used instead of the conventional standard point positioning (SPP). 
+
+	Galileo, in combination with EGNOS (when this service is available), will be used by ARIFI in order to determinate the farmer's position within his farm and thus provide him with information on irregularities in the field. Therefore, a GNSS receiver which determinates the farmer's position is needed. Nonetheless, since ARIFI will has a wide world impact this receiver must be user-friendly and thinking in developing and least developed countries it should be cheap too. In this sense, in ARIFI project two alternatives are being evaluated
+	\begin{itemize}
+		\item A single chip GNSS mass market receiver as the developed under HIMALAYA project \cite{Himalaya}. However, a commercial solution could be too much expensive for the average farmer. 
+		
+		\item A software receiver developed and provided by the ARIFI team. So, the farmer would simply have to have a GNSS antenna and a platform to run the receiver. This option can be supplied at a cheaper price or even for free depending on the farmer's economical condition. 
+	\end{itemize}
+	  
+	Regardless of the option chosen, the receiver will work under open sky conditions so it does not need to be a very sophisticated receiver since the only sources of error will be those given by the ionosphere and the troposphere (multipath can be considered negligible), and both effects can be easily corrected or at least mitigated. In the same way, given the open-sky condition more than 4 satellite can be easily acquired and tracked increasing the accuracy of the position. 
+    
+    
+    \color{black} 
+
+    \item \textbf{EGNOS} is satellite-based augmentation system (SBAS) of Europe and is designed to improve the performance offered by GNSS. Using three geostationary satellites, corrections and integrity information are provided to the GPS signals. The coverage that EGNOS has is practically the whole of Europe and is used for different applications and users that require this service.
+    
+    EGNOS provides three different services:
+    
+    \begin{itemize}
+    
+        \item Open Service (OS): the main objective is to improve the precision of the GPS signal (in the future also the GALILEO signal) through corrections related to satellite clocks, satellite position and ionospheric effects.
+        
+        \item Safety of Life (SoL): this service is used in critical applications such as civil aviation operations. The signal performance level in space is the most rigorous.
+        
+        \item EGNOS Data Acces Service (EDAS): is an access point through Internet to EGNOS data in real time and also a data history.
+        
+    \end{itemize}
+
+    In this project, some of the services provided by EGNOS will be used, mainly to monitor crop and soil performance. With the EGNOS data, the spatial variability of the soil can be measured and from these data different maps of the cultivated land can be obtained. These maps will contain the necessary information to be able to accurately apply pesticides, fertilizers and water, thus obtaining a more sustainable agriculture. Another advantage that this entails is the gain of time when carrying out these tasks, achieving a more efficient agriculture.
+
+    An example of an information map that can be offered (with the additional help of geospatial sensors on the ground) would be similar to Figure \ref{fig:egnos} where the efficiency of the terrain is represented:
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/egnos.jpg}
+        \caption{Terrain efficiency map}
+        \label{fig:egnos}
+    \end{figure} 
+    
+    It has been studied that the use of these services in agriculture have a series of advantages and that is why it has been considered to use EGNOS for this project. One of the things that makes this service attractive is that it is completely free and does not require additional hardware installation on farms or agricultural work fields. It is also very interesting since the information received is information in real time thanks to the three geostationary satellites. Finally, EGNOS is widely available, allowing the farmer to be able to use the service at all times.
+    
+    \item \textbf{Copernicus} is a space program promoted by ESA and its main objective is to provide land surface data to improve environmental management and mitigate the effects of climate change, among other applications.
+    
+    Copernicus is composed of a network of sensors positioned around the Earth and 6 different groups of satellites (the Sentiel) that provide terrestrial observations and measurements, such as images of weather conditions, high-resolution multispectral optical images, atmospheric composition, air quality, etc.
+    
+    It has been considered to make use of the data provided by Copernicus, specifically from the second group of satellites (Sentinel 2) which provide multispectral optical images, very useful in the field of agriculture. These satellites pass every 5 days, therefore the farmer will be able to have information about his crop every this period of time with a resolution of 10x10m. An example of the images that these satellites provide can be seen in Figure \ref{fig:copernicus}.
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/copernicus.jpeg}
+        \caption{Image provided by Copernicus}
+        \label{fig:copernicus}
+    \end{figure} 
+    
+    A variable that will be extracted from this service is the Normalized Difference Vegetation Index (NDVI) that is used to estimate the quantity, quality and development of vegetation based on the measurement of radiation intensity of certain bands of the electromagnetic spectrum. that the vegetation emits or reflects. With this parameter the area can be mapped highlighting the parts of the land that need to be fertilized, areas affected by diseases or pests and areas with water deficits.
+    
+    Therefore, the use of the service provided by this program will serve to optimize resources, predict crop performance and save time when inspecting the crop and acting on problems on soil problems.
     
 \end{itemize}
 \subsubsection{Artificial intelligence}
