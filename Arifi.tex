@@ -2,52 +2,72 @@
 ARIFI is an ongoing project whose main goal is to combine GNSS services with Artificial intelligence into a web application. This application will provide agricultors not only with useful data, but also with instructions on what actions to take so as to manage more efficiently their farms and improve their harvest profits.\\
 %
 %
-The project started after a several discussions with farmers from different countries around the world. Amongst all the professionals we reached, we established tighter connection with the ones presented in section \ref{adv}, which up to this day constitute our advisory board. The intention of all the conversations via phone calls or e-mail, was to get a deeper insight on the state of the art concerning agriculture. We tried to analyse common difficulties among farmers, despite being far apart from one another, making special emphasis in those that we thought we could contribute to, as a team with solid knowledge in GNSS and AI.\\
+The project started after a several discussions with farmers from different countries around the world. The intention of this conversations via phone calls or e-mail, was to get a deeper insight on the current agriculture situation. We tried to analyse common difficulties among farmers, despite being far apart from one another, making special emphasis in those that we thought we contribute to, as a team with solid knowledge in GNSS and AI.\\
 %
 %
-In conclusion, we obtained valuable feedback from farmers that helped the team to better shape the project and define more clearly which difficulties we wanted to address with ARIFI. The latter have been itemised and briefly described next, so as to give a more schematic look of what we concluded.
+In conclusion, we obtained valuable feedback from farmers that helped the team to better shape the project and define more clearly which difficulties we wanted to adress with ARIFI. The later have been itemized and briefly described next, so as to give a more schematic look of what we concluded.
 % REVISAAAAAAAAAAAAAAR JOAN
 %::::::::::::::::::
 %::::::::::::::::::
 %::::::::::::::::::
 \begin{itemize}
-    \item \textbf{Interpretation of weather forecasts:} It is well known that weather forecasts are of extreme importance for agriculture. It helps farmers to prevent their harvest to be damaged and also to adjust farming systems that perform vital functions such as irrigation. In this concrete aspect, we found
-    that in the first place, farmers received weather forecasts, either on their own or by means of external companies, that where not detailed enough in many cases. In the second place and more importantly, most of these forecasts were only useful for well experienced agricultors, who knew to interpret this data and deduct what actions to take in consequence. This is a problem that ARIFI wants to solve, not only by providing more detailed weather forecasts, but also to combine them with data from other sources so as to provide farmers with instructions on how to proceed with their farming activities. We want to make from ARIFI an ally for a wide range of farmers, whatever their technical knowledge or work experience. Plus, we think ARIFI can be specially useful in developing countries' agricultural sector, where consulting services from specialised companies are limited. 
-    \item \textbf{knowledge of field's characteristics:} Although all farmers know their fields to some extend, not many have precise and/or detailed knowledge about more concrete aspects aspects, e.g. soil height irregularities, chemical characteristics etc. These parameters should be taken into account in order to optimise many farming activities. The major handicap in this aspect is that they are not easy to determine, and in some cases it implies an expensive and time-consuming deployment of measuring devices. ARIFI expects to contribute to this necessity by offering farmers more detailed knowledge of their farms, making use of GNSS services combined with AI and signal/image processing techniques.
-    \item \textbf{Adaptation to climate change:} Climate change affects agriculture in particular by changing the intensity and duration of certain meteorologic conditions. This not only affects the way farmers have to manage their fields, but also shifts periodic climate conditions within the year, which threats agricultors' farming schedules. That being said, to optimise their harvest, farmers should not only anticipate threatening climate changes, such as heat waves, but also to adapt their yearly farming schedule to these climate shifts.
-    ARIFI aims to provide support to farmers in this issue by making thanks to its artificial intelligence module. The latter will keep track of climate distortions over time so as to make more accurate predictions of climate changes and shifts.  
+    \item \textbf{Interpretation of weather forecasts:} It is well known that weather forecasts are of extreme importance for agriculture. It helps farmers to prevent their harvest to be damaged and also to adapt system such as irrigation. In this case, we found that the forecasts most farmers obtained were not detailed enough in many cases, and more importantly, most of them were only useful for well experienced agricultors which knew to interpret this information and what actions to take in result. This is a problem that ARIFI wants to solve by gathering all the necessary data, not only to make weather forecasts, but also to combine it with data from other sources so as to provide users with instructions on how to act even if they are not well experienced farmers. This can be specially useful in the agriculture sector from developing countries that lack from technical advise from specialized companies. 
+    \item \textbf{knowledge of field's characteristics:} Although all farmers know their fields to some extend, not many have detailed knowledge about aspects, e.g. soil height irregularities, chemical characteristics etc, which are relevant for many farming activities. This characteristics are currently not easy to determine and in some cases it implies expensive measurings processes that might take long. In this aspect ARIFI wants to provide with useful information by processing copernicu's images.
+    \item \textbf{Adaptation to climate change:}
 \end{itemize}
-As mentioned earlier, ARIFI is an ongoing project under development. Even though its main objectives are well outlined at the moment, thanks to the potential of the technical subjects in which it is based (GNSSs and AI), it has the potential of being a very scalable project, which will be able to adapt and introduce new features in the future.
 
 \input{overview}
 \newpage
 \subsection{Technical aspect}
-\subsubsection{Satellite services}
+\subsubsection{GNSS side}
 \begin{itemize}
-    \item \textbf{GALILEO}
+    \item \textbf{GALILEO} \color{blue} is a global satellite navigation system funded, developed and maintained by Europe which provides to European citizens independence and sovereignty, minimizing the disconnection and/or interruption of other GNSS systems (such as GPS or GLONASS). Furthermore, Galileo offers new services: search and rescue (SAR), Galileo Publich Regulated Serive (PRS) for governmental authorised users and sensitive applications and more precise position for commercial purposes.   
+    
+    Once Galileo is fully operational it will consists of 24 active and 6 reserve satellites. Besides, different frequency bands (see figure \ref{fig:frequency_plan} \footnote{Figure obtained from \url{https://gssc.esa.int/navipedia/index.php/Galileo_Signal_Plan}}) will be used to increase and improve the precision level, availability and timing under the most hostile condition. 
+    
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=0.8\textwidth]{images/Galileo_Frequency_Plan.png}
+    	\caption{Galileo frequency distribution}
+    	\label{fig:frequency_plan}
+    \end{figure} 
+    
+    Galileo system is able to provide a position with a root-mean-square (RMS) error equals to 0.43–1.20 m, 0.52–1.29 m, and 1.34–3.25 m in the east component, north component, and up component, respectively. These errors are comparable to those obtained with GPS system despite the smaller number of satellites and larger PDOPs \cite{Gal_pos}. Obviously, these results can be improved if a precise point positioning (PPP) is used instead of the conventional standard point positioning (SPP). 
+
+	Galileo, in combination with EGNOS (when this service is available), will be used by ARIFI in order to determinate the farmer's position within his farm and thus provide him with information on irregularities in the field. Therefore, a GNSS receiver which determinates the farmer's position is needed. Nonetheless, since ARIFI will has a wide world impact this receiver must be user-friendly and thinking in developing and least developed countries it should be cheap too. In this sense, in ARIFI project two alternatives are being evaluated
+	\begin{itemize}
+		\item A single chip GNSS mass market receiver as the developed under HIMALAYA project \cite{Himalaya}. However, a commercial solution could be too much expensive for the average farmer. 
+		
+		\item A software receiver developed and provided by the ARIFI team. So, the farmer would simply have to have a GNSS antenna and a platform to run the receiver. This option can be supplied at a cheaper price or even for free depending on the farmer's economical condition. 
+	\end{itemize}
+	  
+	Regardless of the option chosen, the receiver will work under open sky conditions so it does not need to be a very sophisticated receiver since the only sources of error will be those given by the ionosphere and the troposphere (multipath can be considered negligible), and both effects can be easily corrected or at least mitigated. In the same way, given the open-sky condition more than 4 satellite can be easily acquired and tracked increasing the accuracy of the position. 
+    
+    
+    \color{black} 
     \item \textbf{EGNOS} is satellite-based augmentation system (SBAS) of Europe and is designed to improve the performance offered by GNSS. Using three geostationary satellites, corrections and integrity information are provided to the GPS signals. The coverage that EGNOS has is practically the whole of Europe and is used for different applications and users that require this service.
     
     EGNOS provides three different services:
     
     \begin{itemize}
     
-		\item Open Service (OS): the main objective is to improve the precision of the GPS signal (in the future also the GALILEO signal) through corrections related to satellite clocks, satellite position and ionospheric effects.
-		
-		\item Safety of Life (SoL): this service is used in critical applications such as civil aviation operations. The signal performance level in space is the most rigorous.
-		
-		\item EGNOS Data Acces Service (EDAS): is an access point through Internet to EGNOS data in real time and also a data history.
-		
-	\end{itemize}
+        \item Open Service (OS): the main objective is to improve the precision of the GPS signal (in the future also the GALILEO signal) through corrections related to satellite clocks, satellite position and ionospheric effects.
+        
+        \item Safety of Life (SoL): this service is used in critical applications such as civil aviation operations. The signal performance level in space is the most rigorous.
+        
+        \item EGNOS Data Acces Service (EDAS): is an access point through Internet to EGNOS data in real time and also a data history.
+        
+    \end{itemize}
 
     In this project, some of the services provided by EGNOS will be used, mainly to monitor crop and soil performance. With the EGNOS data, the spatial variability of the soil can be measured and from these data different maps of the cultivated land can be obtained. These maps will contain the necessary information to be able to accurately apply pesticides, fertilizers and water, thus obtaining a more sustainable agriculture. Another advantage that this entails is the gain of time when carrying out these tasks, achieving a more efficient agriculture.
 
     An example of an information map that can be offered (with the additional help of geospatial sensors on the ground) would be similar to Figure \ref{fig:egnos} where the efficiency of the terrain is represented:
     
     \begin{figure}
-    	\centering
-    	\includegraphics[width=0.8\textwidth]{images/egnos.jpg}
-    	\caption{Terrain efficiency map}
-    	\label{fig:egnos}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/egnos.jpg}
+        \caption{Terrain efficiency map}
+        \label{fig:egnos}
     \end{figure} 
     
     It has been studied that the use of these services in agriculture have a series of advantages and that is why it has been considered to use EGNOS for this project. One of the things that makes this service attractive is that it is completely free and does not require additional hardware installation on farms or agricultural work fields. It is also very interesting since the information received is information in real time thanks to the three geostationary satellites. Finally, EGNOS is widely available, allowing the farmer to be able to use the service at all times.
@@ -59,19 +79,18 @@ As mentioned earlier, ARIFI is an ongoing project under development. Even though
     It has been considered to make use of the data provided by Copernicus, specifically from the second group of satellites (Sentinel 2) which provide multispectral optical images, very useful in the field of agriculture. These satellites pass every 5 days, therefore the farmer will be able to have information about his crop every this period of time with a resolution of 10x10m. An example of the images that these satellites provide can be seen in Figure \ref{fig:copernicus}.
     
     \begin{figure}
-    	\centering
-    	\includegraphics[width=0.8\textwidth]{images/copernicus.jpeg}
-    	\caption{Image provided by Copernicus}
-    	\label{fig:copernicus}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/copernicus.jpeg}
+        \caption{Image provided by Copernicus}
+        \label{fig:copernicus}
     \end{figure} 
     
     A variable that will be extracted from this service is the Normalized Difference Vegetation Index (NDVI) that is used to estimate the quantity, quality and development of vegetation based on the measurement of radiation intensity of certain bands of the electromagnetic spectrum. that the vegetation emits or reflects. With this parameter the area can be mapped highlighting the parts of the land that need to be fertilized, areas affected by diseases or pests and areas with water deficits.
     
     Therefore, the use of the service provided by this program will serve to optimize resources, predict crop performance and save time when inspecting the crop and acting on problems on soil problems.
     
-    
 \end{itemize}
-\subsubsection{Artificial intelligence}
+\subsubsection{AI side}
 To address the proposed idea and achieve our goal, we will focus on how to relate machine learning techniques, field of Artificial Intelligence (AI), with the study of the atmosphere provided by satellite data. Thanks to the Copernicus Atmosphere Monitoring Service, we will be able to access to data that will allow us to predict the main atmospheric phenomenons which affects the production of the majority farmers.\\\\
 %
 In particular, we are talking about reanalysis variables. This kind of data is obtained by some weather forecasting centres, which combine past observations with a modern meteorological forecast model, in order to produce regular gridded datasets of many atmospheric and oceanic variables, with a temporal resolution of a few hours. This datasets usually extend over several decades and cover the entire planet, being a very useful tool for meteorological and climatological studies.\\\\
@@ -107,13 +126,6 @@ Many of these methods can be classified in the field of Knowledge called “Natu
 
 The conjunction between satellite data and machine learning algorithms will allow us to provide solutions to those aspects that most concern farmers, in order to keep their harvests safe with the highest possible productivity. For instance, if we are able to anticipate how much water they will have at a given time, or to warn of a dry season that was not previously contemplated but, due to the effects produced by climate change may occur, we will have a positive influence on their economy by avoiding unnecessary expenses derived from poor management, because they do not have all the information they could.
 
+\subsection{Added value}
 \subsubsection{Comparisons}	
-The beginning of a project takes place after analysing the subject's state of the art to which it addresses. In this research, it is important to determine that the development of the project's idea will bring added value with respect to already existing solutions. In ARIFI, we have relied on our supervisors, who are well familiarised with agriculture topics, to know from first hand some of the real necessities farmers have, and how are they currently faced, assuming they are. The intention of this section is to make a more detailed comparison between the approeach of ARIFI and methods that are currently being used to overcome the difficulties presented in section X. We will recover them and make a brief comparison in the following bullet-points. 
-\begin{itemize}
-    \item \textbf{Interpretation of weather forecasts:} 
-    \item \textbf{knowledge of field's characteristics:} 
-    \item \textbf{Adaptation to climate change:} 
-\end{itemize}
-
 \subsection{Discussion of critical areas}
-\subsection{Schedule}
