@@ -1,25 +1,53 @@
 \section{ARIFI's project description}
-ARIFI is an ongoing project whose main goal is to combine GNSS services with Artificial intelligence into a web application. This application will provide agricultors not only with useful data, but also with instructions on what actions to take so as to manage more efficiently their farms and improve their harvest profits.\\
-%
-%
-The project started after a several discussions with farmers from different countries around the world. The intention of this conversations via phone calls or e-mail, was to get a deeper insight on the current agriculture situation. We tried to analyse common difficulties among farmers, despite being far apart from one another, making special emphasis in those that we thought we contribute to, as a team with solid knowledge in GNSS and AI.\\
-%
-%
-In conclusion, we obtained valuable feedback from farmers that helped the team to better shape the project and define more clearly which difficulties we wanted to adress with ARIFI. The later have been itemized and briefly described next, so as to give a more schematic look of what we concluded.
-% REVISAAAAAAAAAAAAAAR JOAN
-%::::::::::::::::::
-%::::::::::::::::::
-%::::::::::::::::::
-\begin{itemize}
-    \item \textbf{Interpretation of weather forecasts:} It is well known that weather forecasts are of extreme importance for agriculture. It helps farmers to prevent their harvest to be damaged and also to adapt system such as irrigation. In this case, we found that the forecasts most farmers obtained were not detailed enough in many cases, and more importantly, most of them were only useful for well experienced agricultors which knew to interpret this information and what actions to take in result. This is a problem that ARIFI wants to solve by gathering all the necessary data, not only to make weather forecasts, but also to combine it with data from other sources so as to provide users with instructions on how to act even if they are not well experienced farmers. This can be specially useful in the agriculture sector from developing countries that lack from technical advise from specialized companies. 
-    \item \textbf{knowledge of field's characteristics:} Although all farmers know their fields to some extend, not many have detailed knowledge about aspects, e.g. soil height irregularities, chemical characteristics etc, which are relevant for many farming activities. This characteristics are currently not easy to determine and in some cases it implies expensive measurings processes that might take long. In this aspect ARIFI wants to provide with useful information by processing copernicu's images.
-    \item \textbf{Adaptation to climate change:}
-\end{itemize}
 
+%The beginning of a project takes place after analysing the subject's state of the art to which it addresses. In this research, it is important to determine that the development of the project's idea will bring added value with respect to the already existing solutions. In ARIFI, we have relied on our supervisors, who are well familiarised with agriculture topics, to know from first hand some of the real difficulties farmers have, and how are they currently faced, if they are (see section X). Following up on this idea, the intention of this section is to make a more detailed comparison between ARIFI's approach to cover farmer necessities and traditional or up to date methods that are being used. We will recover the necessities presented earlier in section X and make the mentioned comparison in the following bullet-points. 
+%
+%
+ARIFI is an ongoing project whose main goal is to combine GNSS services with Artificial intelligence into a web application. This application will provide agricultors not only with useful data, but also with instructions on what actions to take so as to manage more efficiently their farms and improve their harvest profits.\\\\
+%
+The project started after a several discussions with farmers from different countries around the world. Amongst all the professionals we reached, we established tighter connection with the ones presented in section \ref{adv} who up to this day constitute our advisory board. The intention of all the conversations via phone calls or e-mail, was to get a deeper insight on the state of the art concerning agriculture. We tried to analyse common difficulties among farmers, despite being far apart from one another, making special emphasis in those that we thought we could contribute to, as a team with solid knowledge in GNSS and AI.\\\\
+%
+%
+In conclusion, we obtained valuable feedback from farmers that helped the team to better shape the project and define more clearly which difficulties we wanted to address with ARIFI. Even though out main objectives are well outlined at the moment, thanks to the potential of the technical subjects in which ARIFI is based, mainly GNSS and AI, it stands out for its scalability, which means it will be able to adapt and introduce new features relatively easily in the future.
+
+\subsection{Interpretation of weather forecasts.}
+%
+It is well known that weather forecasts are of extreme importance for agriculture. It helps farmers to prevent their harvest to be damaged and also to adjust farming systems that perform vital functions such as irrigation. Farmers obtain weather forecasts, either for themselves via internet or by means of external and specialised companies. These forecastss are sometimes not precise enough. More importantly, most of them are only useful for well experienced agricultors, who knew to interpret this data and deduct what actions to take in consequence. This is a problem that ARIFI wants to solve, not only by providing more detailed weather forecasts, but also to combine them with data from other sources and time epochs to provide agricultors with instructions on how to proceed with their farming activities. We want to make from ARIFI an ally for a wide range of farmers, whatever their technical knowledge or work experience. Plus, we it can be specially useful in developing countries' agricultural sector, where consulting services from specialised companies are a limited resource.\\\\
+%
+%
+\begin{figure}[b!]
+    \centering
+    \includegraphics[scale=0.7]{images/benin.JPG}
+    \caption{Porto-Novos' weather summary from weather.com}
+    \label{fig:benin}
+\end{figure}
+%
+%
+Figures \ref{fig:benin}, \ref{fig:vapour}  and \ref{fig:filter} where extracted from \link{www.weather.com} and just constitute a mere example of the process a farmer should follow in order to obtain a more precise weather forecast. Figure \ref{fig:benin}, displays a climate summary from city of Porto-Novo in Benin, Africa. Figure \ref{fig:vapour} and \ref{fig:filter} display a satellite view of Porto-Novo and its surroundings with a water-vapour and an infrared filter respectively. These figures will result only useful for experienced farmers. They must know enough not only to determine the implications of the change in climate along the timeline, but also to know which actions to take in consequence, and last but not least when to take them.
+%
+\begin{figure}[b!]
+    \centering
+    \includegraphics[scale=0.6]{images/water_vapor.JPG}
+    \caption{Porto-Novos' satellite image displaying water vapour.}
+    \label{fig:vapour}
+\end{figure}
+\begin{figure}[b!]
+    \centering
+    \includegraphics[scale=0.6]{images/infrared.JPG}
+    \caption{Porto-Novos' satellite image with an infrared filter.}
+    \label{fig:filter}
+\end{figure}
+\clearpage
+
+\subsection{knowledge of field's characteristics}
+Although all farmers know their fields to some extent, not many have precise and/or detailed knowledge about more concrete aspects aspects, e.g. soil height irregularities, chemical characteristics etc. These parameters should be taken into account in order to optimise many farming activities. The major handicap in this aspect is that they are not easy to determine, and in some cases it implies an expensive and time-consuming deployment of measuring devices. ARIFI expects to contribute to this necessity by offering farmers more detailed knowledge of their farms, making use of GNSS services combined with AI and signal/image processing techniques.
+\subsection{Adaptation to climate change}
+Climate change affects agriculture in particular by changing the intensity and duration of certain meteorologic conditions. This not only affects the way farmers have to manage their fields, but also shifts periodic climate conditions within the year, which threats agricultors' farming schedules. That being said, to optimise their harvest, farmers should not only anticipate threatening climate changes, such as heat waves, but also to adapt their yearly farming schedule to these climate shifts.
+ARIFI aims to provide support to farmers in this issue by making thanks to its artificial intelligence module. The latter will keep track of climate distortions over time so as to make more accurate predictions of climate changes and shifts.  
+% OVERVIEW
 \input{overview}
-\newpage
 \subsection{Technical aspect}
-\subsubsection{GNSS side}
+\subsubsection{Satellite services}
 \begin{itemize}
     \item \textbf{GALILEO} \color{blue} is a global satellite navigation system funded, developed and maintained by Europe which provides to European citizens independence and sovereignty, minimizing the disconnection and/or interruption of other GNSS systems (such as GPS or GLONASS). Furthermore, Galileo offers new services: search and rescue (SAR), Galileo Publich Regulated Serive (PRS) for governmental authorised users and sensitive applications and more precise position for commercial purposes.   
     
@@ -91,7 +119,7 @@ In conclusion, we obtained valuable feedback from farmers that helped the team t
     Therefore, the use of the service provided by this program will serve to optimize resources, predict crop performance and save time when inspecting the crop and acting on problems on soil problems.
     
 \end{itemize}
-\subsubsection{AI side}
+\subsubsection{Artificial intelligence}
 To address the proposed idea and achieve our goal, we will focus on how to relate machine learning techniques, field of Artificial Intelligence (AI), with the study of the atmosphere provided by satellite data. Thanks to the Copernicus Atmosphere Monitoring Service, we will be able to access to data that will allow us to predict the main atmospheric phenomenons which affects the production of the majority farmers.\\\\
 %
 In particular, we are talking about reanalysis variables. This kind of data is obtained by some weather forecasting centres, which combine past observations with a modern meteorological forecast model, in order to produce regular gridded datasets of many atmospheric and oceanic variables, with a temporal resolution of a few hours. This datasets usually extend over several decades and cover the entire planet, being a very useful tool for meteorological and climatological studies.\\\\
@@ -127,6 +155,24 @@ Many of these methods can be classified in the field of Knowledge called “Natu
 
 The conjunction between satellite data and machine learning algorithms will allow us to provide solutions to those aspects that most concern farmers, in order to keep their harvests safe with the highest possible productivity. For instance, if we are able to anticipate how much water they will have at a given time, or to warn of a dry season that was not previously contemplated but, due to the effects produced by climate change may occur, we will have a positive influence on their economy by avoiding unnecessary expenses derived from poor management, because they do not have all the information they could.
 
-\subsection{Added value}
-\subsubsection{Comparisons}	
-\subsection{Discussion of critical areas}
+\subsection{Schedule}
+ARIFI's project plan follows the GSA Farming by satellite schedule. The latter consists of the 3 phases listed bellow, which have been also displayed in figure X for a more graphical description.
+\begin{figure}[b!]
+\centering
+\includegraphics[scale= 0.7]{images/schedule.eps}
+\caption{ARIFI's timeline within the GSA contest}
+\label{fig:sch2}
+\end{figure}
+\begin{enumerate}
+    \item \textbf{Open call for ideas:} In this phase we worked hard so as to give shape to our project idea. To do this, we kept close contact with our advisory board with a high degree of expertise in agriculture. 
+    \item \textbf{Deep Dive Phase:} In this phase we expect to outline more concrete details about ARIFI, also taking advantage from GSA advice. The list of pending subjects we have left for the deep dive phase are the following:
+    \begin{itemize}
+        \item \textbf{Web Application Interface:} We expect to define a primary web interface so that reviewers can have a feeling of how will the user interaction with the app be. We expect to make an accurate mock-up similar to the final version.
+        \item \textbf{AI algorithm:} Our expert in AI has described how should the AI algorithm work so as to output key data, that will later be required from consecutive modules. However, more work is needed in this subject so as to define and adapt more accurately this concrete module to project as a whole.
+        \item \textbf{Advisor's supervision:} We do not forget that in order to achieve ARIFI's success, we should keep in constant contact with our advisors and take experts feedback into account, so as to avoid drifting off the initial objective and cover farmer necessities.
+    \end{itemize}
+    \item \textbf{Live Pitches:} After presenting our work from the deep dive face, we will count with a yet to be determined period of time to create our live pitch exposition and to prepare ARIFI's presentation.\\
+\end{enumerate}
+
+
+
