@@ -39,6 +39,7 @@
 \usetikzlibrary{quotes,angles}
 \usepackage{lipsum}
 \usepackage{verbatim}
+\usepackage{geometry}
 \renewcommand{\baselinestretch}{1}
 \setlength{\textheight}{8.7in}
 \setlength{\textwidth}{6.5in}
@@ -61,7 +62,7 @@
 
 
 \begin{document}
-	
+\newcommand{\link}[1]{{\color{blue}\href{#1}{#1}}}
 \newcommand{\roundpic}[4][]{
   \tikz\node [circle, minimum width = #2,
     path picture = {
@@ -85,7 +86,7 @@
 }
 
 \date{%
-	\vspace{5cm}
+	\vfill
 	Sonia Framis, Laura Cornejo, Freddy Pinto, Joan Bernabeu\\
 	\vspace{0.5cm}
 	\today}
@@ -98,7 +99,7 @@
 \include{Arifi}
 % TODOS
 \include{team}
-
+\include{bib}
 
 
 
